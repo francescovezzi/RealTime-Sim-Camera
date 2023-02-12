@@ -29,6 +29,34 @@ Cmake build system generator is used. To compile the code:
 `cmake .. && cmake --build .`
 
 ## Execution
-***Use administrator priviliges*** due to the use of RATE MONOTONIC scheduler:
+To execute the program please use ***administrator priviliges*** (due to the use of RATE MONOTONIC scheduler):
 
 `sudo ./camera`
+
+## Object Tracking
+The camera tracks a moving target in the space and its velocity is controlled in closed-loop using target's position and velocity according to the
+following scheme:
+
+<p align="left">
+<img src="https://user-images.githubusercontent.com/95044968/218309830-20abea89-98a5-45bd-bf17-b206cde6bc29.jpg" width="70%" height="70%"/>
+</p>
+
+## GUI
+Several parameters can be changed by the user in Real-Time.
+These parameters are reported in the graphic's menus.
+
+It's possible to specify:
+  - Movement type of the target:
+    1. Random movement
+    2. Sinusoid movement
+         - Amplitude **A** and Period **P**
+    3. Mouse controlled movement
+  - Controller poles **x** and **y system poles**
+  - Camera motors poles  **x** and **y motor poles**
+  - Camera window's size **S**
+
+To change such values just press the arrows <kbd>Up</kbd> or <kbd>Down</kbd> to select the desired one, then just press + or - to inrease or decrease it.
+
+Press **ESC** to quit the simulation. Enjoy.
+
+
